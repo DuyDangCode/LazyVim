@@ -11,18 +11,18 @@ require("lazy").setup({
 
     spec = {
         -- add LazyVim and import its plugins
-        { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-            colorscheme = "terafox",
-        } },
-        -- {
-        --   "lalitmee/cobalt2.nvim",
-        --   dependencies = { "tjdevries/colorbuddy.nvim", tag = "v1.0.0" },
-        --   init = function()
-        --       require("colorbuddy").colorscheme("cobalt2")
-        --   end,
-        -- },
+        {
+            "LazyVim/LazyVim",
+            import = "lazyvim.plugins",
+            opts = {
 
-        --  in your lua config
+                colorscheme = "terafox",
+            },
+        },
+        -- {
+        --     "tjdevries/colorbuddy.nvim",
+        -- },
+        -- --  in your lua config
         -- import any extras modules here
         -- { import = "lazyvim.plugins.extras.lang.typescript" },
         -- { import = "lazyvim.plugins.extras.lang.json" },
@@ -40,7 +40,7 @@ require("lazy").setup({
         version = false, -- always use the latest git commit
         -- version = "*", -- try installing the latest stable version for plugins that support semver
     },
-    -- install = { colorscheme = { "terafox"} },
+    install = { colorscheme = { "terafox", "tokyonight", "habamax" } },
     checker = { enabled = true }, -- automatically check for plugin updates
     performance = {
         -- cache = { enabled = true }, -- cache the plugins
